@@ -28,9 +28,11 @@ The script contains a function run.analysis() that performs the actual job:
 * Write the output to a file “tidy_data.txt” file with write.table() using row.name=FALSE
 
 Firstly, download data (samsung data) from the given URL. run the following command:
-```source('./run_analysis.R')```
-```download.data() # download samsung data and unzip it```
-```run.analysis() # invoke the actual function```
+```
+source('./run_analysis.R')
+download.data() # download samsung data and unzip it
+run.analysis() # invoke the actual function
+```
 
 If the data is being downloaded manually, unzip data in the current working directory and run the following command:
 source('./run_analysis.R')
