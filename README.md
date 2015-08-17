@@ -1,7 +1,7 @@
 # Module3CourseProject
-This project is to demonstrate ability to collect, work with, and clean a data set.
+This course project is to demonstrate ability to collect, work with, and clean a data set.
 
-The script contains a function run.analysis() that performs the actual job:
+The script contains a function run.analysis() that performs the following tasks:
 
 **Test dataset**
 * The test datasets is stored in the TEST folder
@@ -27,7 +27,7 @@ The script contains a function run.analysis() that performs the actual job:
 * Combine the test and train datasets into one
 * Write the output to a file “tidy_data.txt” file with write.table() using row.name=FALSE
 
-Firstly, download data (samsung data) from the given URL. run the following command:
+Firstly, download data (samsung data) from the given URL. run the command below:
 ```
 source('./run_analysis.R')
 download.data() # download samsung data and unzip it
