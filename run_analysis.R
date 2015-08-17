@@ -2,7 +2,16 @@ library(base)
 library(utils)
 library(data.table)
 
-# The function loads and processes either a train or a test data set,
+# This function downloads the Samsung data from a given URL and extracts it
+download.data <- function () {
+  zip.url <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
+  zip.file <- 'dataset.zip'
+  
+  download.file(zip.url, destfile = zip.file, method = 'curl')
+  unzip(zip.file)
+}
+
+# The below function loads and processes either a train or a test data set,
 # given that current directory is the Samsung data set.
 load.dataset <- function (set, features, labels) {
   # Construct the relative pathes of data files
@@ -11,9 +20,8 @@ load.dataset <- function (set, features, labels) {
   file.label <- paste(prefix, 'y_', set, '.txt', sep = '')
   file.subject <- paste(prefix, 'subject_', set, '.txt', sep = '')
   
-  # Cannot load the data using fread() function.
-  # fread() fails to determine the correct number of columns in dataset.
-  # So we read the data into a data.frame and then transform it into data.table
+  
+  # This command read the data into a data.frame and then transform it into data.table
   data <- read.table(file.data)[, features$index]
   names(data) <- features$name
   
