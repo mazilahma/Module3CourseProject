@@ -1,31 +1,45 @@
 # Module3CourseProject
-A project to demonstrate ability to collect, work with, and clean a data set.
-
-Script
+This project is to demonstrate ability to collect, work with, and clean a data set.
 
 The script contains a function run.analysis() that performs the actual job:
 
-    reads train and test data sets and merges them
-    processes the merged data set (extract the relevant variables, adds descriptive activity names, etc.)
-    writes the merged data set to rawdata.csv
-    generates the tidy data set
-    writes the tidy data set to tidydata.csv
-    returns the tidy data set
+Test dataset
+• The test datasets is stored in the TEST folder
+• It consists of the subject_test.txt, X_test.txt and y_test.txt files
+• Read all 3 files
+• Label X_test columns according to the features.txt
+• Select only “mean” and “std” features from X_test
+• Label Y_test column as “Activity ID” and “Activity Label”
+• Label Subject_test column as “Subject”
+• Combine all three into one dataset
 
-If you've a Samsung data available in the current directory, just run:
+Training Dataset
+• The training datasets is stored in the TRAIN folder
+• It consists of the subject_train.txt, X_train.txt and y_train.txt files
+• Read all 3 files
+• Label X_train columns according to the features.txt
+• Select only “mean” and “std” features from X_train
+• Label Y_train column as “Activity ID” and “Activity Label”
+• Label Subject_train column as “Subject”
+• Combine all three into one dataset
 
-source('./run_analysis.R')
-run.analysis() # invoke the actual function
+Tidy Dataset
+• Combine the test and train datasets into one
+• Write the output to a file “tidy_data.txt” file with write.table() using
+row.name=FALSE
 
-Otherwise, you can use download.data() function provided in the script. The function will download the data archive and extract it. After that you can run run.analysis(). The full code:
-
+Firstly, download data (samsung data) from the given URL. run the following command:
 source('./run_analysis.R')
 download.data() # download samsung data and unzip it
 run.analysis() # invoke the actual function
 
-If you don't want to use download.data(), you should download the samsung data manually, unzip it in the current directory and then run:
-
+If the data is being downloaded manually, unzip data in the current working directory and run the following command:
 source('./run_analysis.R')
 run.analysis() # invoke the actual function
 
-Note: In all the examples above, I assume that the script file run_analysis.R resides in the current working directory. If it does not, you should provide the correct path to the file to source it.
+Once data is in the current working directory, just run the following command:
+source('./run_analysis.R')
+run.analysis() # invoke the actual function
+
+
+Note: Please ensure the script file run_analysis.R resides in the current working directory. If it does not, you can use SETWD() command to set your current working directory.
