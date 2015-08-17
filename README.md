@@ -35,12 +35,15 @@ run.analysis() # invoke the actual function
 ```
 
 If the data is being downloaded manually, unzip data in the current working directory and run the following command:
+```
 source('./run_analysis.R')
 run.analysis() # invoke the actual function
+```
 
 Once data is in the current working directory, just run the following command:
+```
 source('./run_analysis.R')
 run.analysis() # invoke the actual function
-
+```
 
 Note: Please ensure the script file run_analysis.R resides in the current working directory. If it does not, you can use SETWD() command to set your current working directory.
