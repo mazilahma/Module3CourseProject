@@ -46,4 +46,4 @@ source('./run_analysis.R')
 run.analysis() # invoke the actual function
 ```
 
-Note: Please ensure the script file run_analysis.R resides in the current working directory. If it does not, you can use SETWD() command to set your current working directory.
+Note: Please ensure the script file run_analysis.R resides in the current working directory. If it does not, you can use *setwd()* command to set your current working directory.
