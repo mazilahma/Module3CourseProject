@@ -13,7 +13,7 @@ The script contains a function run.analysis() that performs the following tasks:
 * Label Subject_test column as “Subject”
 * Combine all three into one dataset
 
-**Training Dataset**
+***Training Dataset***
 * The training datasets is stored in the TRAIN folder
 * It consists of the subject_train.txt, X_train.txt and y_train.txt files
 * Read all 3 files
@@ -23,7 +23,7 @@ The script contains a function run.analysis() that performs the following tasks:
 * Label Subject_train column as “Subject”
 * Combine all three into one dataset
 
-**Tidy Dataset**
+***Tidy Dataset***
 * Combine the test and train datasets into one
 * Write the output to a file “tidy_data.txt” file with write.table() using row.name=FALSE
 
