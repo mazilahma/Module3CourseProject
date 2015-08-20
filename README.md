@@ -27,7 +27,10 @@ The script contains a function run.analysis() that performs the following tasks:
 * Combine the test and train datasets into one
 * Write the output to a file “tidy_data.txt” file with write.table() using row.name=FALSE
 
-Firstly, set the current working directory by using setwd() function. 
+To invoke the above function, please follow the steps below:
+* set the current working directory by using setwd() function
+* Copy run_analysis.R into the current working directory
+* Ensure all samsung data is in the current working directory
 ```
 Setwd('..') # specify the working directory 
 source('run_analysis.R') # download samsung data in zip file and unzip it
