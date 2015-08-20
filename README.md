@@ -1,7 +1,7 @@
 # Module3CourseProject
 This course project is to demonstrate ability to collect, work with, and clean a data set.
 
-The script contains a function run.analysis() that performs the following tasks:
+The script contains a function sdata.analysis() that performs the following tasks:
 
 ***Test dataset***
 * The test datasets is stored in the TEST folder
