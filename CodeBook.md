@@ -55,10 +55,10 @@ The set of variables that were estimated from these signals are:
 
 Tidy data set contains the same variables as the raw does, but the variables were renamed according to following rules:
 
-    All lower case when possible - the variables names were not converted to lower case, since it would make them unreadable. Instead, the variable names were converted to satisfy camlCase rule.
-    Descriptive (Diagnosis versus Dx) - the variable names are descriptive, so nothing special should be done.
-    Not duplicated - the variable names are unique, so again nothing special had to be done.
-    Not have underscores or dots or white spaces - dashes and parentheses were removed from variable names.
+    * All lower case when possible 
+    * Descriptive names  
+    * Not duplicated (the variable names are unique)
+    * Remove underscores or dots or white spaces(dashes and parentheses) 
 
 ###Variables in raw and tidy data set
 |Raw data set 	           |   Tidy data set       |
