@@ -18,14 +18,14 @@ The datasets contains 6 activities:
 ###Raw data set
 
 The raw data set contains variables including:
-    *subject - An identifier of the subject who carried out the experiment.
-    *label - An activity label.
-    *accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ
-    *time domain signals (prefix 't' to denote time) 
-    *frequency domain signals (prefix 'f' to denote frequency)
-    *mean(): Mean value
-    *std(): Standard deviation
-    
+* subject - An identifier of the subject who carried out the experiment.
+* label - An activity label.
+* accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ
+* time domain signals (prefix 't' to denote time) 
+* frequency domain signals (prefix 'f' to denote frequency)
+* mean()
+* std()
+
 These signals were used to estimate variables of the feature vector for each pattern:
 -XYZ is used to denote 3-axial signals in the X, Y and Z directions.
     tBodyAcc-XYZ
@@ -50,10 +50,10 @@ These signals were used to estimate variables of the feature vector for each pat
 ###Tidy data set
 
 Tidy data set contains the same variables as the raw does, but the variables were renamed according to following rules:
-    * All lower case when possible 
-    * Descriptive names  
-    * Not duplicated (the variable names are unique)
-    * Remove underscores or dots or white spaces(dashes and parentheses) 
+* All lower case when possible
+* Descriptive names  
+* Not duplicated (the variable names are unique)
+* Remove underscores or dots or white spaces(dashes and parentheses) 
 
 ###Variables in raw and tidy data set
 |Raw data set 	           |   Tidy data set       |
