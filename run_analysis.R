@@ -2,14 +2,11 @@ library(base)
 library(utils)
 library(data.table)
 
-# This function downloads the Samsung data from a given URL and extracts it
-download.data <- function () {
+# To downloads the Samsung data from a given URL and extracts it
   zip.url <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
   zip.file <- 'dataset.zip'
-  
-  download.file(zip.url, destfile = zip.file, method = 'curl')
+  download.file(zip.url, destfile = zip.file, method = "wb")
   unzip(zip.file)
-}
 
 # The below function loads and processes either a train or a test data set,
 # given that current directory is the Samsung data set.
@@ -35,7 +32,7 @@ load.dataset <- function (set, features, labels) {
   data.table(data)
 }
 
-run.analysis <- function () {
+sdata.analysis <- function () {
   setwd("C:/Users/mazilah.amin/Desktop/Coursera/DataModule3/")
   # Get the features
   feature.set <- read.table('features.txt', col.names = c('index', 'name'))
@@ -46,11 +43,12 @@ run.analysis <- function () {
   
   # Read train and test data sets
   train.set <- load.dataset('train', features, label.set)
+  View(train.set)
   test.set <- load.dataset('test', features, label.set)
-  
+  View(test.set)
   # The raw data set
   dataset <- rbind(train.set, test.set)
-  
+  View(dataset)
   # Generate the tidy data set
   tidy.dataset <- dataset[, lapply(.SD, mean), by=list(label, subject)]
   
@@ -61,9 +59,10 @@ run.analysis <- function () {
   names <- gsub('[()-]', '', names) # Remove the parenthesis and dashes
   names <- gsub('BodyBody', 'Body', names) # Replace `BodyBody' by `Body'
   setnames(tidy.dataset, names)
+  View(tidy.dataset)
   
   # Write the raw and the tidy data sets to files
-  setwd('..')
+  setwd('.')
   write.table(dataset, file = 'rawdata.txt', row.names = FALSE)
   write.table(tidy.dataset, file = 'tidydata.txt',
               row.names = FALSE, quote = FALSE)
