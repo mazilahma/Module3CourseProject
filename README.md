@@ -34,6 +34,6 @@ To invoke the above function, please follow the steps below:
 ```
 Setwd('..') # specify the working directory 
 source('run_analysis.R') # download samsung data in zip file and unzip it
-run.analysis() # invoke the function to read test.data, train.data, features data
+sdata.analysis() # invoke the function to read test.data, train.data, features data
 ```
 
